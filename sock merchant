@@ -1,0 +1,36 @@
+https://www.hackerrank.com/challenges/sock-merchant/problem
+
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int arr[] = new int[n];
+        
+        for(int i=0;i<n;i++){
+            arr[i] = in.nextInt();
+        }
+        
+        Arrays.sort(arr);
+        int count = 0;
+        for(int i=0;i<n-1;i++){
+            if(arr[i] == arr[i+1]){
+                count += 1;
+                i += 1;
+            }
+        }
+        System.out.println(count);
+    }
+}
+
+
+//* reason for i++ : input array- 5 6 5 7 5 8 sorted array- 5 5 5 6 7 8
+it will make two pairs of element a[0]and a[1] ,a[1]and a[2] thats why you have to skip the counted element. *//
