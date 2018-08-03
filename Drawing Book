@@ -1,0 +1,30 @@
+https://www.hackerrank.com/challenges/drawing-book/problem
+
+
+import java.io.*;
+import java.math.*;
+import java.text.*;
+import java.util.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int n  =in.nextInt();
+        int p = in.nextInt();
+        int middle = n/2;
+        int turns;
+        
+        if(p>middle && p%2==0){
+            turns=(n-p)/2;
+        }
+        else if(p>middle && p%2!=0){
+            turns = (n-p+1)/2;
+                           
+        }
+        else{
+            turns = p/2;
+        }
+        System.out.println(turns);
+    }
+}
