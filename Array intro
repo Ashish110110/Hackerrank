@@ -1,0 +1,28 @@
+https://www.hackerrank.com/challenges/arrays-introduction/problem
+
+solve using STL.
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iterator>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    std::cin.ignore(256,'\n');
+    std::vector<int> v;
+    std::copy(std::istream_iterator<int> (std::cin),std::istream_iterator<int> (),back_inserter(v));
+    std::copy(v.rbegin(),v.rend(),std::ostream_iterator<int> (std::cout, " "));
+    //std::copy(rbegin(v),rend(v),ostream_iterator(std::cout," "));
+    return 0;
+}
+
+Links: 
+https://www.geeksforgeeks.org/vector-in-cpp-stl/
+https://www.geeksforgeeks.org/vector-rbegin-and-rend-function-in-c-stl/
+http://www.cplusplus.com/reference/algorithm/copy/
+https://en.cppreference.com/w/cpp/iterator/istream_iterator
